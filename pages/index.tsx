@@ -1,10 +1,11 @@
 import type { NextPage } from "next";
-import "../styles/pages/Home.module.scss";
+import Header from "../components/Header";
+import styles from "../styles/pages/Home.module.scss";
 
 const Home: NextPage = () => {
   return (
-    <div className="">
-      <h1>Hello World!</h1>
+    <div className={styles.container}>
+      <Header />
     </div>
   );
 };

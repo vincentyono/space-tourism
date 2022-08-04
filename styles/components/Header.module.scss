@@ -1,0 +1,176 @@
+@use "../variables";
+
+.container {
+  display: flex;
+  align-items: center;
+}
+
+#logo {
+  margin-left: 2.5rem;
+}
+
+#hamburger {
+  display: none;
+}
+
+#close {
+  display: none;
+}
+
+.navigation {
+  margin-left: auto;
+  background: variables.$transparent;
+  backdrop-filter: blur(1rem);
+}
+
+.navigation-list {
+  display: flex;
+  list-style: none;
+}
+
+.navigation-items {
+  font-family: variables.$sans-serif;
+  font-size: variables.$fs-nav-text;
+  letter-spacing: variables.$cs-nav-text;
+  padding-block: 2.5rem;
+
+  a {
+    text-decoration: none;
+    color: variables.$white;
+  }
+
+  span {
+    font-weight: 700;
+    color: variables.$white;
+  }
+}
+
+.active {
+  border-bottom: 0.2rem solid variables.$white;
+}
+
+.hover {
+  &:hover {
+    border-bottom: 0.2rem solid variables.$gray;
+  }
+}
+
+// Desktop view
+
+@media (min-width: 875px) {
+  .container {
+    position: relative;
+    padding-top: 2.5rem;
+  }
+  .navigation {
+    padding-left: 7.6875rem * 0.6;
+    padding-right: 10.3125rem * 0.4;
+
+    &::before {
+      content: "";
+      position: absolute;
+      height: 2px;
+      background: variables.$gray;
+      top: 62.5%;
+      left: 88px + 64px;
+      right: 666px;
+    }
+  }
+
+  .navigation-list {
+    gap: 3.5rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .navigation {
+    padding-left: 7.6875rem;
+    padding-right: 10.3125rem;
+
+    &::before {
+      right: 800px;
+    }
+  }
+}
+
+// Tablet
+
+@media (max-width: 875px) {
+  .navigation {
+    padding-inline: 3rem;
+  }
+
+  .navigation-list {
+    gap: 2.5rem;
+  }
+
+  .navigation-items {
+    padding-block: 2.5rem;
+    span {
+      display: none;
+    }
+  }
+}
+
+// Mobile
+
+@media (max-width: 625px) {
+  .container {
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  #logo {
+    margin: 1.5rem;
+  }
+
+  .navigation {
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    width: 70vw;
+    transition-duration: 500ms;
+    transition-property: width;
+    transition-timing-function: ease-out;
+  }
+
+  .hide {
+    height: 0vh;
+    width: 0vw;
+  }
+
+  #hamburger {
+    display: inline;
+    position: fixed;
+    z-index: 1;
+    right: 1.653125rem;
+    top: 2.121875rem;
+  }
+
+  .navigation-list {
+    flex-direction: column;
+    padding-top: 7.375rem;
+    gap: 0;
+  }
+
+  .navigation-items {
+    padding-block: 1rem;
+    span {
+      padding-block: 0;
+      display: inline;
+    }
+  }
+
+  .active {
+    border: none;
+  }
+}
+
+@media (max-width: 312px) {
+  .navigation-items {
+    span {
+      display: none;
+    }
+  }
+}
