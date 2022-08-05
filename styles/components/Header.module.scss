@@ -29,7 +29,7 @@
 }
 
 .navigation-items {
-  font-family: variables.$sans-serif;
+  font-family: variables.$sans-serif-condensed;
   font-size: variables.$fs-nav-text;
   letter-spacing: variables.$cs-nav-text;
   padding-block: 2.5rem;
@@ -57,45 +57,35 @@
 
 // Desktop view
 
-@media (min-width: 875px) {
+@media (min-width: 1050px) {
   .container {
     position: relative;
     padding-top: 2.5rem;
   }
   .navigation {
-    padding-left: 7.6875rem * 0.6;
-    padding-right: 10.3125rem * 0.4;
-
-    &::before {
-      content: "";
-      position: absolute;
-      height: 2px;
-      background: variables.$gray;
-      top: 62.5%;
-      left: 88px + 64px;
-      right: 666px;
-    }
+    padding-left: 7.6875rem;
+    padding-right: 10.3125rem;
   }
 
   .navigation-list {
     gap: 3.5rem;
   }
-}
 
-@media (min-width: 1200px) {
-  .navigation {
-    padding-left: 7.6875rem;
-    padding-right: 10.3125rem;
-
-    &::before {
-      right: 800px;
-    }
+  .line {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    height: 2px;
+    background: variables.$gray;
+    top: 62.5%;
+    left: 88px + 64px;
+    right: 800px;
   }
 }
 
 // Tablet
 
-@media (max-width: 875px) {
+@media (max-width: 1050px) {
   .navigation {
     padding-inline: 3rem;
   }
@@ -138,6 +128,10 @@
   .hide {
     height: 0vh;
     width: 0vw;
+  }
+
+  .hide-items {
+    display: none;
   }
 
   #hamburger {

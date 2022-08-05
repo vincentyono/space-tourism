@@ -1,0 +1,143 @@
+@use "../variables.scss";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  color: variables.$white;
+}
+
+.text {
+  width: 50ch;
+  h1 {
+    font-family: variables.$serif;
+    font-size: variables.$fs-heading-1;
+    font-weight: 400;
+    margin-block: 1rem;
+  }
+
+  h5 {
+    color: variables.$light-purple;
+    font-family: variables.$sans-serif-condensed;
+    font-weight: 400;
+    font-size: variables.$fs-heading-5;
+    letter-spacing: variables.$cs-heading-5;
+  }
+
+  p {
+    font-family: variables.$sans-serif;
+    color: variables.$light-purple;
+    font-size: 1rem;
+    line-height: 2;
+  }
+}
+
+.btn {
+  border-radius: 100%;
+  text-align: center;
+  font-family: variables.$serif;
+  font-size: variables.$fs-heading-4;
+  border: none;
+  background-color: variables.$white;
+  width: 274px;
+  height: 274px;
+  outline: 0 solid variables.$transparent-gray;
+  transition: outline;
+  transition-duration: 250ms;
+
+  &:hover {
+    outline: 5.5rem solid variables.$transparent-gray;
+  }
+}
+
+// desktop
+@media (min-width: 1050px) {
+  .container {
+    background: url("../../static/home/background-home-desktop.jpg");
+    background-size: cover;
+    justify-content: space-between;
+  }
+
+  .content {
+    padding-inline: 11.45833%;
+    padding-bottom: 14.55555%;
+    align-items: flex-end;
+  }
+}
+
+// Tablet
+@media (max-width: 1050px) {
+  .container {
+    background: url("../../static/home/background-home-tablet.jpg");
+    background-size: cover;
+    min-height: 1024px;
+  }
+
+  .content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .text {
+    margin-top: 6.125rem;
+    h5 {
+      font-size: 1.25rem;
+      text-align: center;
+    }
+
+    h1 {
+    }
+
+    p {
+      text-align: center;
+    }
+  }
+
+  .btn {
+    margin-top: 9.75rem;
+  }
+}
+
+// Mobile
+
+@media (max-width: 625px) {
+  .container {
+    background: url("../../static/home/background-home-mobile.jpg");
+    background-size: cover;
+    min-height: 667px;
+  }
+
+  .content {
+    flex-direction: column;
+  }
+
+  .text {
+    margin-top: 3rem;
+    text-align: center;
+    width: 40ch;
+
+    h5 {
+      font-size: 1rem;
+    }
+
+    h1 {
+      font-size: 5rem;
+    }
+
+    p {
+      font-size: 0.9375rem;
+    }
+  }
+
+  .btn {
+    margin-top: 3rem;
+    width: 150px;
+    height: 150px;
+    font-size: 1.25rem;
+  }
+}

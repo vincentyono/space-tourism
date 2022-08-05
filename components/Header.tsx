@@ -28,6 +28,7 @@ const Header = () => {
           }}
         />
       )}
+      <div className={styles["line"]}></div>
       <nav
         className={`${styles["navigation"]} ${
           !hamburgerActive && styles["hide"]
@@ -37,7 +38,7 @@ const Header = () => {
           <li
             className={`${styles["navigation-items"]} ${
               router.pathname == "/" ? styles["active"] : styles["hover"]
-            }`}
+            } ${!hamburgerActive && styles["hide-items"]}`}
           >
             <Link href="/">
               <a>
@@ -50,9 +51,9 @@ const Header = () => {
               router.pathname == "/destination"
                 ? styles["active"]
                 : styles["hover"]
-            }`}
+            } ${!hamburgerActive && styles["hide-items"]}`}
           >
-            <Link href="/">
+            <Link href="/destination">
               <a>
                 <span>01</span> DESTINATION
               </a>
@@ -61,7 +62,7 @@ const Header = () => {
           <li
             className={`${styles["navigation-items"]} ${
               router.pathname == "/crew" ? styles["active"] : styles["hover"]
-            }`}
+            } ${!hamburgerActive && styles["hide-items"]}`}
           >
             <Link href="/crew">
               <a>
@@ -74,7 +75,7 @@ const Header = () => {
               router.pathname == "/destination"
                 ? styles["active"]
                 : styles["hover"]
-            }`}
+            } ${!hamburgerActive && styles["hide-items"]}`}
           >
             <Link href="/technology">
               <a>

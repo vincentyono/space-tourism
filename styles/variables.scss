@@ -1,12 +1,14 @@
 // Colors
 $white: hsl(0 0% 100%);
 $transparent: hsl(0 0% 100% / 0.1);
+$transparent-gray: hsl(0 0% 50% / 0.2);
 $gray: hsl(0, 0%, 59%);
 $black: hsl(230 35% 7%);
 $light-purple: hsl(231 77% 90%);
 
 // Fonts
-$sans-serif: "Barlow Condensed", sans-serif;
+$sans-serif-condensed: "Barlow Condensed", sans-serif;
+$sans-serif: "Barlow", sans-serif;
 $serif: "Bellefair", serif;
 
 // Font sizes
@@ -20,6 +22,6 @@ $fs-subheading-2: 0.875rem;
 $fs-nav-text: 1rem;
 
 // Character spaces
-$cs-heading-5: 0.28125em;
-$cs-subheading-2: 0.146875em;
-$cs-nav-text: 0.16875em;
+$cs-heading-5: 0.28125rem;
+$cs-subheading-2: 0.146875rem;
+$cs-nav-text: 0.16875rem;
