@@ -123,6 +123,13 @@
     transition-duration: 500ms;
     transition-property: width;
     transition-timing-function: ease-out;
+    z-index: 1;
+  }
+
+  .hover {
+    &:hover {
+      border-bottom: none;
+    }
   }
 
   .hide {
@@ -136,10 +143,11 @@
 
   #hamburger {
     display: inline;
-    position: fixed;
+    position: absolute;
     z-index: 1;
     right: 1.653125rem;
     top: 2.121875rem;
+    z-index: 2;
   }
 
   .navigation-list {
