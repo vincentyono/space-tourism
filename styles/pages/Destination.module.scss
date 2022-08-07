@@ -83,7 +83,7 @@
 @media (min-width: 1050px) {
   .container {
     min-height: 100vh;
-    background: url("../../static/destination/background-destination-desktop.jpg");
+    background: url("../../public/static/destination/background-destination-desktop.jpg");
     background-size: cover;
   }
 
@@ -129,7 +129,7 @@
 @media (max-width: 1050px) {
   .container {
     min-height: 100vh;
-    background: url("../../static/destination/background-destination-tablet.jpg");
+    background: url("../../public/static/destination/background-destination-tablet.jpg");
     background-size: cover;
   }
 
@@ -198,7 +198,7 @@
 @media (max-width: 625px) {
   .container {
     min-height: 100vh;
-    background: url("../../static/destination/background-destination-mobile.jpg");
+    background: url("../../public/static/destination/background-destination-mobile.jpg");
     background-size: cover;
   }
 

@@ -1,7 +1,7 @@
 import styles from "../styles/components/Header.module.scss";
-import Logo from "../static/shared/logo.svg";
-import Hamburger from "../static/shared/icon-hamburger.svg";
-import Close from "../static/shared/icon-close.svg";
+import Logo from "../public/static/shared/logo.svg";
+import Hamburger from "../public/static/shared/icon-hamburger.svg";
+import Close from "../public/static/shared/icon-close.svg";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useState } from "react";

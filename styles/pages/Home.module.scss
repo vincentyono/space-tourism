@@ -58,7 +58,7 @@
 // desktop
 @media (min-width: 1050px) {
   .container {
-    background: url("../../static/home/background-home-desktop.jpg");
+    background: url("../../public/static/home/background-home-desktop.jpg");
     background-size: cover;
     justify-content: space-between;
   }
@@ -73,7 +73,7 @@
 // Tablet
 @media (max-width: 1050px) {
   .container {
-    background: url("../../static/home/background-home-tablet.jpg");
+    background: url("../../public/static/home/background-home-tablet.jpg");
     background-size: cover;
     min-height: 1024px;
   }
@@ -104,7 +104,7 @@
 
 @media (max-width: 625px) {
   .container {
-    background: url("../../static/home/background-home-mobile.jpg");
+    background: url("../../public/static/home/background-home-mobile.jpg");
     background-size: cover;
     min-height: 667px;
   }
