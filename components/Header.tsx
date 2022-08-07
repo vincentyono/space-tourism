@@ -61,10 +61,12 @@ const Header = () => {
           </li>
           <li
             className={`${styles["navigation-items"]} ${
-              router.pathname == "/crew" ? styles["active"] : styles["hover"]
+              router.pathname.includes("/crew/")
+                ? styles["active"]
+                : styles["hover"]
             } ${!hamburgerActive && styles["hide-items"]}`}
           >
-            <Link href="/crew">
+            <Link href="/crew/douglas-hurley">
               <a>
                 <span>02</span> CREW
               </a>

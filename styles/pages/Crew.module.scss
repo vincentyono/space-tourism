@@ -1,0 +1,262 @@
+@use "../variables";
+
+.container {
+  min-height: 100vh;
+}
+
+.main {
+  display: flex;
+}
+
+.description {
+  > h5 {
+    color: variables.$white;
+    font-family: variables.$sans-serif-condensed;
+    font-size: variables.$fs-heading-5;
+    letter-spacing: variables.$cs-heading-5;
+    font-weight: 400;
+
+    > span {
+      color: darken(variables.$gray, 20);
+    }
+  }
+}
+
+.content {
+  > h4 {
+    font-family: variables.$serif;
+    font-size: variables.$fs-heading-4;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: darken(variables.$white, 50);
+  }
+
+  > h3 {
+    font-family: variables.$serif;
+    font-size: variables.$fs-heading-3;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: variables.$white;
+  }
+
+  > p {
+    font-family: variables.$sans-serif;
+    font-size: 1.125rem;
+    color: variables.$light-purple;
+  }
+}
+
+.navigation-list {
+  display: flex;
+  list-style: none;
+}
+
+.navigation-items {
+  position: relative;
+  min-width: 15px;
+  min-height: 15px;
+  border-radius: 100%;
+  background-color: darken(variables.$gray, 25);
+  opacity: 0.6;
+  a {
+    position: absolute;
+    min-width: 100%;
+    min-height: 100%;
+  }
+}
+
+.hover {
+  &:hover {
+    background-color: variables.$gray;
+    opacity: 1;
+  }
+}
+
+.active {
+  background-color: variables.$white;
+  opacity: 1;
+}
+
+.image {
+  position: relative;
+}
+
+.crew-image {
+  min-width: 100%;
+  min-height: 100%;
+}
+
+// Desktop
+@media (min-width: 1050px) {
+  .container {
+    background: url("../../static/crew/background-crew-desktop.jpg");
+    background-size: cover;
+    overflow: hidden;
+  }
+
+  .main {
+    padding-top: 4.75rem;
+    margin-left: 11%;
+    gap: 5rem;
+  }
+
+  .description {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 3fr;
+    min-width: 614px;
+    > h5 {
+      margin-bottom: 9.625rem;
+    }
+  }
+
+  .content {
+    min-width: 50vw;
+    grid-column: 1 / span 1;
+    > h4 {
+      margin-bottom: 0.975rem;
+    }
+
+    > h3 {
+      margin-bottom: 1.68rem;
+    }
+    > p {
+      width: 45ch;
+    }
+  }
+
+  .navigation {
+    margin-top: 7.5rem;
+    padding-bottom: 5.875rem;
+  }
+
+  .navigation-list {
+    gap: 1.5rem;
+  }
+
+  .image {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    min-height: 712px;
+    min-width: 514px;
+  }
+}
+
+// Tablet
+@media (max-width: 1050px) {
+  .container {
+    background: url("../../static/crew/background-crew-tablet.jpg");
+    background-size: cover;
+  }
+
+  .main {
+    flex-direction: column;
+    padding-inline: 2.40625rem;
+    padding-top: 2.5rem;
+  }
+
+  .description {
+    > h5 {
+      font-size: 1.25rem;
+    }
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3.75rem;
+    text-align: center;
+
+    > h4 {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    > h3 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    > p {
+      width: 51ch;
+      line-height: 2;
+    }
+  }
+
+  .navigation {
+    margin-block: 2.5rem;
+  }
+
+  .navigation-list {
+    gap: 1rem;
+  }
+
+  .navigation-items {
+    min-width: 10px;
+    min-height: 10px;
+  }
+
+  .description {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .image {
+    margin-inline: auto;
+  }
+}
+
+// Mobile
+@media (max-width: 625px) {
+  .container {
+    background: url("../../static/crew/background-crew-mobile.jpg");
+    background-size: cover;
+  }
+
+  .main {
+    padding-top: 1.5rem;
+    text-align: center;
+  }
+
+  .description {
+    > h5 {
+      order: 1;
+      margin-bottom: 2rem;
+    }
+  }
+
+  .content {
+    order: 3;
+    margin-top: 2rem;
+
+    > h4 {
+      font-size: 1rem;
+      order: 2;
+    }
+
+    > h3 {
+      order: 3;
+      font-size: 1.5rem;
+    }
+
+    > p {
+      width: 40ch;
+      font-size: 0.9375rem;
+      order: 4;
+      margin-bottom: 6.5rem;
+    }
+
+    .navigation {
+      order: 1;
+      margin-top: 0;
+      margin-bottom: 2rem;
+    }
+  }
+
+  .image {
+    order: 2;
+    border-bottom: 1px solid variables.$black;
+    width: 177px;
+  }
+}
